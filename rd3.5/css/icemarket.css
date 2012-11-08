@@ -1,0 +1,35 @@
+body{margin:0;padding:0;background:white;font-family:Georgia;}
+div#dataEntry{margin:0 auto;width:900px;}
+div.graphHolder{float:left;top:0px;width:417px;margin-left:10px;margin-right:10px;margin-bottom:25px;padding:5px;border:1px solid gray;background-color:#e3e3e3;position:relative;}
+a.submit-button{color:#fff;font-family:'AharoniBold';font-size:23px;background:#1c799c;width:165px;text-align:left;padding:10px;position:absolute;right:10px;top:50px;border:1px solid black;display:none;}
+.ui-button-text-only .ui-button-text{padding-left:.1em;}
+a.submit-button.ui-state-hover{background:#308fb3;}
+a.submit-button .ui-button-text{line-height:75%;}
+.visualize{border:0;position:relative;background:white;}
+.visualize canvas{position:absolute;background:#e3e3e3;}
+.visualize .visualize-info{padding:0;background:none;border:0;position:absolute;top:0px;right:0px;opacity:1;text-align:center;width:100%;}
+.visualize-pie .visualize-title{font-weight:normal;padding:3px 5px;background:#e3e3e3;border:0;position:absolute;top:5px;opacity:1;}
+.visualize-pie ul.visualize-key{position:absolute;bottom:-300px;border:0;right:-20px;left:auto;padding:0;background:none;width:250px;}
+.visualize-pie ul.visualize-key li{float:none;padding-left:15px;text-align:right;margin-top:-3px;font-size: 9px;}
+.visualize-pie ul.visualize-key .visualize-key-label{font-size:11px;font-family:'SegoeUINormal',Helvetica,Arial,sans-serif;color:#666;margin-right:15px;display:block;}
+.visualize-pie ul.visualize-key .visualize-key-color{width:10px;height:10px;left:auto;right:0;position:absolute;top:50%;}
+.visualize-pie .visualize-label{font-weight:normal;font-size:18px;color:black;}
+table{border-collapse:collapse;border-color:gray;}
+table th{background-color:#e4dfb0;font-weight:normal;font-family:'SylfaenRegular',Times,serif;font-size:19px;}
+.concept{color:#136280;cursor:pointer;font-family:'SylfaenRegular',Times,serif;font-size:19px;}
+.grayBar{background-color:#cacaca;}
+.smallText{font-size:.7em;}
+div.slider{width:250px;margin:0 auto;height:10px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+.ui-slider-horizontal .ui-slider-range-min{-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+.ui-slider-horizontal .ui-slider-handle{top:-10px;width:29px;height:29px;cursor:pointer;color:white;text-decoration:none;text-align:center;font-size:.7em;line-height:29px;background:url(slideHandle.png) no-repeat top left;border:0;outline:none;}
+.slider.ui-widget-content{background:#717171;border-color:#494949;}
+.tooltip{padding:.8em;border-width:1px !important;position:absolute;display:none;width:250px;z-index:100;border:1px solid black;opacity:1;color:#d84012;background:#fff;font-size:14px;font-weight:normal;cursor:pointer;font-family:'SylfaenRegular',Times,serif;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-o-box-shadow:0 0 10px #888888;-moz-box-shadow:0 0 10px #888888;-webkit-box-shadow:0 0 10px #888888;box-shadow:0 0 10px #888888;}
+.tooltip .fg-tooltip-pointer-down,.tooltip .fg-tooltip-pointer-down-inner{position:absolute;border:1px solid black;width:0;height:0;border-bottom-width:0;background:none;}
+.tooltip .fg-tooltip-pointer-down{border-left:25px solid transparent;border-right:25px solid transparent;border-top-width:25px;bottom:-25px;right:auto;left:50%;margin-left:-25px;}
+.tooltip .fg-tooltip-pointer-down-inner{border-left:24px solid transparent;border-right:24px solid transparent;border-top:24px solid #fff;bottom:auto;top:-25px;left:-24px;}
+.tooltip .fg-tooltip-pointer-left,.tooltip .fg-tooltip-pointer-left-inner{position:absolute;border:1px solid black;width:0;height:0;border-left:0;background:none;}
+.tooltip .fg-tooltip-pointer-left{border-top:25px solid transparent;border-bottom:0px;border-right-width:25px;left:0px;bottom:25px;margin-left:-26px;}
+.tooltip .fg-tooltip-pointer-left-inner{border-top:24px solid transparent;border-bottom:0px;border-right:24px solid #fff;bottom:auto;top:-25px;left:2px;}
+.conceptHolder{width:auto;max-height:400px;}
+h1{font-size:30px;margin-bottom:-5px;}
+h3{font-size:20px;}
