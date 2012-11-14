@@ -1,0 +1,16 @@
+Crowdmed 11/14
+
+notes: 
+
+Feature requests:
+
+1. Vovici alternative - Open source solutiob to produce the survey.
+
+2. UMLS - NIH database access - this db has a API!
+	ICB/9 - The International Conference for the Ninth Revision of the International Classification of Diseases
+
+3. Overlay of Source (medical diagnosis)
+	(HoverOver effect)
+
+4. Forum with Contet for the user (MD -> Patient)
+

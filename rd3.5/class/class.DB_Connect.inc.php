@@ -8,7 +8,8 @@ class DB_Connect {
 		} else {
 			$this->db = mysqli_init();
 			try{
-				$this->db->real_connect('mx.internal', 'iceninja', 'cWUeDtUHc89VWfhZ', 'ice');
+//				$this->db->real_connect('localhost', 'iceninja', 'cWUeDtUHc89VWfhZ', 'ice');
+				$this->db->real_connect('127.0.0.1', 'root', 'ronky', 'ice');
 				$this->db->set_charset("utf8");
 			} catch(Exception $e){
 				echo "Connection Issue: Please check your internet connection and try again.";

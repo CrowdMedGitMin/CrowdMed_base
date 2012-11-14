@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="15">
+	<title>iCE Reports</title>
+	<link rel="stylesheet" href="../../rd2/css/visualize.jQuery.css">
+	<style>
+		div.market { margin: 0 auto; width: 700px; border: 2px solid #999; padding:20px; background:#e1e1e1; }
+		.visualize-labels-x { display: none; }
+		.hidden { display:none; }
+		.visualize { margin: 0 auto; }
+		.visualize .visualize-info { top: auto; bottom: -50px; right: -200px; width: 250px; }
+	</style>
+</head>
+<body>
+<div id="market" class="market"><h1>Volume Weighted Average Price (VWAP):</h1></div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/visualize.jQuery.js"></script>
+<script src="js/master.js"></script>
+<script>
+	(function($) {
+	var prices = document.getElementById('prices'),
+		market = document.getElementById('market'),
+		mid;
+$.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
+	m = $.getUrlVar('m');
+	if (!m) {
+		return false;
+	}
+	market.id = 'market'+m;
+	IS.grapher.init('#market'+m);
+})(jQuery);
+</script>
+</body>
+</html>

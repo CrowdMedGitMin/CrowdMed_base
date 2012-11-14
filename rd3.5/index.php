@@ -7,9 +7,11 @@ function __autoload($class){
 	}
 }
 
-//ini_set('display_errors',1);
-//error_reporting(E_ALL & ~E_NOTICE);
+ini_set('display_errors',1);
+error_reporting(E_ALL & ~E_NOTICE);
 
+$_GET['m'] = '5';
+$_GET['id'] = '1';
 if(!isset($_GET['m'])){
 	// checks to see if the market variable is set correctly
 	echo "Market not set";
@@ -17,8 +19,9 @@ if(!isset($_GET['m'])){
 	// checks to see if the userID is set correctly
 	echo "User data not set";
 } else {
-	$mid = $_GET['m'];
-	$user = $_GET['id'];
+//	$mid = $_GET['m'];
+	$mid = '5';
+	$user = '1';
 	$parent_url = isset($_GET['url']) ? $_GET['url'] : null;
 	$culture = isset($_GET['c']) ? $_GET['c'] : null;
 	$exchange = isset($_GET['exchange']) ? $_GET['exchange'] : 1;
@@ -69,6 +72,8 @@ if(!isset($_GET['m'])){
 		$example = true;
 	}
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

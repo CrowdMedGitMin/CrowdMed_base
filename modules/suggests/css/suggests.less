@@ -1,0 +1,273 @@
+@font: "SegoeUINormal","Segoe UI", Helvetica, Arial, sans-serif;
+@color: #252524;
+.rounded (@topleft: 12px, @topright: 0, @bottomleft: 0, @bottomright: 12px){
+	-moz-border-radius-topleft: @topleft;
+	-moz-border-radius-bottomright: @bottomright;
+	-moz-border-radius-topright: @topleft;
+	-moz-border-radius-bottomleft: @bottomleft;
+
+	-webkit-border-top-left-radius: @topleft;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-top-right-radius: @topright;
+	-webkit-border-bottom-left: @bottomleft;
+	-webkit-background-clip: padding-box;
+	
+	border-top-left-radius: @topleft;
+	border-bottom-right-radius: @bottomright;
+	border-top-right-radius: @topright;
+	border-bottom-left-radius: @bottomleft;
+}
+.box_gradient (@from: #fff, @to: #000) {
+  background-color: @from;
+  background-image: -moz-linear-gradient(top, @from, @to); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, @from),color-stop(1, @to)); /* Saf4+, Chrome */
+            filter:  e(%("progid:DXImageTransform.Microsoft.gradient(startColorStr='%d', EndColorStr='%d')",@from,@to)); /* IE6,IE7 */
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorStr='%d', EndColorStr='%d')",@from,@to); /* IE8 */
+}
+.box_shadow (@x: 0, @y: 0, @blur: 4px, @bxcolor: #000){
+     -moz-box-shadow: @x @y @blur @bxcolor; /* FF3.5+ */
+  -webkit-box-shadow: @x @y @blur @bxcolor; /* Saf3.0+, Chrome */
+          box-shadow: @x @y @blur @bxcolor; /* Opera 10.5, IE 9.0 */
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:13px;
+	color:#eee;
+	background-color: #fff;
+	font-family: @font;
+}
+
+.section.buttons {
+	padding:0;
+	text-align:center;
+	line-height:75px;
+	height:75px;
+	a.next {
+		display:inline-block;
+		background:white url(https://surveys.infosurv.com/vovici/images/ice/next.png) no-repeat top left;
+		width:65px;
+		height:75px;
+	}
+	a.next:hover {
+		background-position:0 -76px;
+	}
+	a.back {
+		display:inline-block;
+		margin-right:5px;
+		margin-bottom:15px;
+		background:white url(https://surveys.infosurv.com/vovici/images/ice/next.png) no-repeat 0 -151px;
+		width:37px;
+		height:44px;
+	}
+	a.back:hover {
+		background-position:0 -195px;
+	}
+}
+
+
+
+.voteshifter {
+	width:960px;
+	overflow:hidden;
+	margin:0 auto;
+	
+	.conceptholder {
+		width:960px;
+		overflow:hidden;
+		
+		.concept {
+			width:960px;
+			margin-top:25px;
+			float:left;
+			position: relative;
+			
+			.conceptImage {
+				width:800px;
+				margin:0 auto;
+				background-color:#fff;
+				border:1px solid #000;
+				.rounded(12px, 12px, 12px, 12px);
+				background-color:#fff;
+				border:1px solid #999;
+				padding:10px;
+				left: 80px;
+				top: 50px;
+			}
+			
+			.background {
+				position: absolute;
+				z-index: 0;
+				opacity:0.5;
+				filter: e(%('alpha(opacity = 50)'));
+				cursor:default;
+			}
+			
+			.foreground {
+				position: absolute;
+				z-index: 1;
+				.box_shadow(0, 0, 10px, #272728);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+.suggest-box {
+	color: #494949;
+	width:500px;
+	margin:0px auto;
+	left: 229px;
+	top: 0px;
+	border: 1px solid #999;
+	.rounded(12px, 12px, 12px, 12px);
+	background-color:#fff;
+	
+	.heading {
+		padding:30px;
+	}
+
+	h1 {
+		color: #D84012;
+		font-size:27px;
+		font-weight:normal;
+		position:relative;
+		
+		em {
+			display:block;
+			color:#CCCCCC;
+			font-size:25px;
+			text-align:center;
+			margin-bottom:-20px;
+		}
+	}
+
+	ul.suggestions { 
+		list-style:none; 
+		-webkit-padding-start: 0px; 
+		padding-left:0;
+		
+		li {
+			border-top: 1px solid #999;
+			padding:5px;
+			position:relative;
+			font-size:18px;
+			overflow-x:hidden;
+			word-wrap:break-word;
+		}
+	}
+
+	.heading {
+		.rounded(12px, 12px, 0, 0);
+	}
+	
+	.suggest {
+		padding:30px;
+		border-top: 1px solid #999;
+		.rounded(0,0,12px,12px);
+		text-align:center;
+		div {
+			margin-top:.5em;
+		}
+	}
+
+	.suggestionText {
+		background-color:#F0F0F0;
+		border:1px solid #333333;
+		color:#888;
+		font-family: @font;
+		font-size:18px;
+		padding:4px;
+		text-shadow:1px 1px 0 white;
+		width: 390px;
+		margin: 0 auto;
+		outline:none;
+		display:block;
+		.rounded(7px,7px,0px,0px);
+	}
+
+	.submitSuggestion {
+		border: 1px solid #19677d;
+		border-top-width: 0;
+		color: #09232F;
+		font-family: @font;
+		font-size:18px;
+		padding: 4px;
+		text-shadow: 0 1px 0 #25bdf0;
+		width: 400px;
+		margin:0 auto;
+		cursor:pointer;
+		display:block;
+		.box_gradient(#30c6f0,#228dab);
+		.rounded(0px,0px,7px,7px);
+	}
+
+	.submitSuggestion:hover {
+		.box_gradient(#28a3c7,#1b7089);
+		text-shadow: 0 1px 0 #28a3c7;
+	}
+
+	form.working .submitSuggestion {
+		background-position:left bottom;
+	}
+
+	.suggestions {
+		.text {
+			line-height:1.4;
+			padding:0 10px;
+		}
+		
+		.rating {
+			bottom:12px;
+			color:#939393;
+			font-family: @font;
+			font-size:18px;
+			position:absolute;
+			right:15px;
+		}
+	}
+
+	.vote {
+		float:right;
+		padding:2px 10px 2px 2px;
+		margin-right: -10px;
+		
+		span {
+			background:url('thumbs.png') no-repeat;
+			float:left;
+			height:24px;
+			margin-left:4px;
+			width:24px;
+			cursor:pointer;
+		}
+		
+		.down { 
+			background-position: 0px -34px;
+		}
+	}
+
+
+	.vote.inactive span {
+		opacity:0.5;
+		filter: e(%('alpha(opacity = 50)'));
+		cursor:default;
+	}
+
+	.vote.active {
+		.up:hover {	
+			background-position:-26px 0;
+		}
+		
+		.down:hover {
+			background-position:-26px -34px;
+		}
+	}
+}
